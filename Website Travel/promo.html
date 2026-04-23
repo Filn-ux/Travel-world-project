@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promo - Jelajahi Tempat Wisata Indonesia</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.svg" alt="Logo Pesona Nusantara" class="logo-img"> Pesona<span>Nusantara</span>
+            </a>
+            
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Beranda</a></li>
+                    <li><a href="destinasi.html" class="nav-link">Destinasi</a></li>
+                    <li><a href="promo.html" class="nav-link active">Promo</a></li>
+                    <li><a href="informasi.html" class="nav-link">Informasi</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+            
+            <label for="nav-toggle" class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+        </div>
+    </header>
+
+    <section class="hero hero-minimal">
+        <div class="hero-overlay"></div>
+        <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?q=80&w=2000&auto=format&fit=crop" class="hero-bg" alt="Promo Tour Indonesia">
+        <div class="hero-content">
+            <h1 class="hero-title"><span class="text-highlight">Promo</span> Terbaik</h1>
+            <p class="hero-subtitle">Jangan lewatkan diskon menarik dan fasilitas lengkap untuk rencana liburan Anda selanjutnya.</p>
+        </div>
+    </section>
+
+    <main>
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Penawaran Bulan Ini</h2>
+            </div>
+            <div class="grid-container cards-container">
+                
+                <!-- Promo 1 -->
+                <div class="card dest-card">
+                    <div class="card-content">
+                        <div class="card-badge" style="position: static; background: var(--clr-accent); color: white; display: inline-block; margin-bottom: 1rem;">Diskon 30%</div>
+                        <h3>Paket 3 Hari 2 Malam Bali</h3>
+                        <p>Nikmati liburan romantis di Bali termasuk kunjungan ke Pantai Kuta dan Pura Ulun Danu Bedugul tanpa ribet.</p>
+                        
+                        <ul class="promo-features">
+                            <li><i class='bx bx-check-circle'></i> Fasilitas Hotel Bintang 4</li>
+                            <li><i class='bx bx-bus'></i> Antar Jemput Bandara Transportasi AC</li>
+                            <li><i class='bx bx-coffee'></i> Makan Pagi (Sarapan Buffet)</li>
+                            <li><i class='bx bx-ticket'></i> Termasuk Semua Tiket Atraksi Wisata</li>
+                        </ul>
+                        
+                        <h4>Rp 2.500.000 <span style="font-size: 0.8rem; font-weight:normal; text-decoration:line-through;">Rp 3.600.000</span> / orang</h4>
+                        <a href="contact.html" class="btn btn-secondary mt-2" style="margin-top: 1rem;">Klaim Promo</a>
+                    </div>
+                </div>
+
+                <!-- Promo 2 -->
+                <div class="card dest-card">
+                    <div class="card-content">
+                        <div class="card-badge" style="position: static; background: var(--clr-accent); color: white; display: inline-block; margin-bottom: 1rem;">Paket Grup Murah</div>
+                        <h3>Eksplorasi Labuan Bajo 4H3M</h3>
+                        <p>Sailing kepulauan komodo dengan kapal Phinisi standar, snorkeling sepuasnya, dan hiking ke pulau Padar.</p>
+                        
+                        <ul class="promo-features">
+                            <li><i class='bx bx-water'></i> Menginap di Kapal Phinisi (Liveaboard)</li>
+                            <li><i class='bx bx-camera'></i> Dokumentasi Drone & Underwater</li>
+                            <li><i class='bx bx-restaurant'></i> Full Board Meals (Makan 3x Sehari)</li>
+                            <li><i class='bx bx-swim'></i> Alat Snorkeling & Pelampung</li>
+                        </ul>
+                        
+                        <h4>Rp 3.800.000 / orang</h4>
+                        <a href="contact.html" class="btn btn-secondary mt-2" style="margin-top: 1rem;">Klaim Promo</a>
+                    </div>
+                </div>
+
+                <!-- Promo 3 -->
+                <div class="card dest-card">
+                    <div class="card-content">
+                        <div class="card-badge" style="position: static; background: var(--clr-primary); color: white; display: inline-block; margin-bottom: 1rem;">Best Seller</div>
+                        <h3>Bromo Midnight Trip (1 Hari)</h3>
+                        <p>Paket simpel berburu matahari terbit (Sunrise) super mengesankan di kawah gunung Bromo bertolak cepat dari Malang/Surabaya.</p>
+                        
+                        <ul class="promo-features">
+                            <li><i class='bx bx-car'></i> Transportasi Jeep 4WD PP</li>
+                            <li><i class='bx bxs-drink'></i> Snack & Minuman Hangat</li>
+                            <li><i class='bx bx-user'></i> Supir merangkap Tour Guide Ramah</li>
+                            <li><i class='bx bx-ticket'></i> Tiket Masuk Taman Nasional</li>
+                        </ul>
+                        
+                        <h4>Rp 450.000 / orang</h4>
+                        <a href="contact.html" class="btn btn-secondary mt-2" style="margin-top: 1rem;">Klaim Promo</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="footer-container">
+            <div class="footer-col about-col">
+                <a href="index.html" class="logo">
+                     <img src="logo.svg" alt="Logo" class="logo-img" style="filter: brightness(0) invert(1);"> Pesona<span>Nusantara</span>
+                </a>
+            </div>
+            <div class="footer-col">
+                <h3>Telusuri</h3>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Jelajahi Tempat Wisata Indonesia. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

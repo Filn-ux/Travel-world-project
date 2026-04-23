@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi - Jelajahi Tempat Wisata Indonesia</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.svg" alt="Logo Pesona Nusantara" class="logo-img"> Pesona<span>Nusantara</span>
+            </a>
+
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Beranda</a></li>
+                    <li><a href="destinasi.html" class="nav-link">Destinasi</a></li>
+                    <li><a href="promo.html" class="nav-link">Promo</a></li>
+                    <li><a href="informasi.html" class="nav-link active">Informasi</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <label for="nav-toggle" class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+        </div>
+    </header>
+
+    <section class="hero hero-minimal">
+        <div class="hero-overlay"></div>
+        <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?q=80&w=2000&auto=format&fit=crop"
+            class="hero-bg" alt="Sejarah Tempat Wisata Indonesia">
+        <div class="hero-content">
+            <h1 class="hero-title"><span class="text-highlight">Informasi</span> Wisata</h1>
+            <p class="hero-subtitle">Panduan komprehensif untuk merencanakan liburan impian Anda ke seluruh penjuru
+                Nusantara.</p>
+        </div>
+    </section>
+
+    <!-- Informasi Konten -->
+    <main>
+        <section class="section experiences">
+            <div class="section-header">
+                <span class="section-subtitle">Panduan Perjalanan</span>
+                <h2 class="section-title">Hal yang Perlu Anda Ketahui</h2>
+            </div>
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Bali_Pura_Ulun_Danu_Bratan_a.jpg/1200px-Bali_Pura_Ulun_Danu_Bratan_a.jpg"
+                alt="Informasi Wisata"
+                style="width:100%; max-height:400px; object-fit:cover; border-radius: var(--br-md); margin-bottom: 3rem; box-shadow: var(--shadow-sm);">
+
+            <div class="experiences-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+
+                <!-- Info 1 -->
+                <div class="exp-item">
+                    <i class='bx bx-cloud exp-icon'></i>
+                    <h4>Iklim & Cuaca</h4>
+                    <p style="text-align: left; margin-top: 1rem;">Indonesia beriklim tropis dengan dua musim utama:
+                        Kemarau (April - Oktober) dan Hujan (November - Maret). Sangat disarankan untuk datang pada
+                        musim kemarau demi menikmati pantai dan pendakian. Suhu rata-rata berkisar di angka 28°C - 32°C.
+                    </p>
+                </div>
+
+                <!-- Info 2 -->
+                <div class="exp-item">
+                    <i class='bx bx-train exp-icon'></i>
+                    <h4>Akses Transportasi</h4>
+                    <p style="text-align: left; margin-top: 1rem;">Perjalanan antar pulau utamanya dilakukan dengan
+                        pesawat terbang atau kapal laut PELNI. Untuk transportasi darat di dalam pulau (khususnya Jawa
+                        dan sebagian Sumatera), kereta api adalah opsi yang sangat efisien dan nyaman, di samping bus
+                        pariwisata.</p>
+                </div>
+
+                <!-- Info 3 -->
+                <div class="exp-item">
+                    <i class='bx bx-body exp-icon'></i>
+                    <h4>Etika & Adat Istiadat</h4>
+                    <p style="text-align: left; margin-top: 1rem;">Penduduk lokal sangat ramah, tetapi sopan santun
+                        sangat dijunjung tinggi. Berpakaianlah tertutup ketika mengunjungi tempat ibadah (Wajib memakai
+                        selendang/sarung di pura Bali). Gunakan selalu tangan kanan untuk menerima atau memberi sesuatu.
+                    </p>
+                </div>
+
+                <!-- Info 4 -->
+                <div class="exp-item">
+                    <i class='bx bx-money exp-icon'></i>
+                    <h4>Uang & Pembayaran</h4>
+                    <p style="text-align: left; margin-top: 1rem;">Mata uang resmi adalah Rupiah (IDR). Meski kota-kota
+                        turis sangat menerima Kartu Kredit dan e-wallet (QRIS), uang tunai tetap wajib disiapkan untuk
+                        jajan kaki lima atau berkunjung ke destinasi pelosok yang belum terpapar mesin EDC.</p>
+                </div>
+
+                <!-- Info 5 -->
+                <div class="exp-item">
+                    <i class='bx bx-dish exp-icon'></i>
+                    <h4>Kuliner Nusantara</h4>
+                    <p style="text-align: left; margin-top: 1rem;">Jangan lewatkan mencicipi kekayaan rempah. Setiap
+                        daerah punya ikon kulinernya sendiri, seperti Rendang di Sumatera Barat, Babi Guling di Bali,
+                        Nasi Liwet di Jawa, dan Papeda di wilayah Indonesia Timur. Tanyakan batas kepedasannya sebelum
+                        memesan jika perut Anda sensitif.</p>
+                </div>
+
+                <!-- Info 6 -->
+                <div class="exp-item">
+                    <i class='bx bx-first-aid exp-icon'></i>
+                    <h4>Kesehatan & Keselamatan</h4>
+                    <p style="text-align: left; margin-top: 1rem;">Bawalah obat-obatan pribadi, krim anti-nyamuk, dan
+                        tabir surya (sunblock). Meskipun malaria langka di kota besar, wilayah ujung timur Indonesia
+                        mungkin memerlukan kehati-hatian ekstra. Minumlah hanya dari air kemasan botol bersegel.</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="footer-container">
+            <div class="footer-col about-col">
+                <a href="index.html" class="logo">
+                    <img src="logo.svg" alt="Logo" class="logo-img" style="filter: brightness(0) invert(1);">
+                    Pesona<span>Nusantara</span>
+                </a>
+            </div>
+            <div class="footer-col">
+                <h3>Telusuri</h3>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Jelajahi Tempat Wisata Indonesia. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

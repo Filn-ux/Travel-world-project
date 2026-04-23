@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Jelajahi Tempat Wisata Indonesia</title>
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Jelajahi keindahan tempat wisata Indonesia.">
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <header id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.svg" alt="Logo Pesona Nusantara" class="logo-img"> Pesona<span>Nusantara</span>
+            </a>
+
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link active">Beranda</a></li>
+                    <li><a href="destinasi.html" class="nav-link">Destinasi</a></li>
+                    <li><a href="promo.html" class="nav-link">Promo</a></li>
+                    <li><a href="informasi.html" class="nav-link">Informasi</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <label for="nav-toggle" class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?q=80&w=2000&auto=format&fit=crop"
+            class="hero-bg" alt="Pemandangan indah Indonesia">
+
+        <div class="hero-content">
+            <h1 class="hero-title">Jelajahi Pesona <br><span class="text-highlight">Indonesia</span></h1>
+            <p class="hero-subtitle">Mulai dari keajaiban alam tersembunyi hingga warisan budaya yang tak lekang oleh
+                waktu. Temukan petualangan Anda berikutnya bersama kami.</p>
+            <div class="hero-buttons">
+                <a href="destinasi.html" class="btn btn-primary">Mulai Penjelajahan <i
+                        class='bx bx-right-arrow-alt'></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <section class="section destinations">
+            <div class="section-header">
+                <span class="section-subtitle">Tempat Terpopuler</span>
+                <h2 class="section-title">Destinasi Pilihan Kami</h2>
+            </div>
+            <div class="grid-container cards-container">
+                <!-- Card 1 -->
+                <div class="card dest-card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=800&auto=format&fit=crop"
+                            alt="Bali">
+                        <div class="card-badge"><i class='bx bxs-star'></i> 4.9</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-location"><i class='bx bx-map'></i> Bali</div>
+                        <h3>Pura Ulun Danu Beratan</h3>
+                        <p>Nikmati keindahan pura ikonik di tengah danau yang menenangkan jiwa dengan udara sejuk
+                            Bedugul.</p>
+                        <a href="destinasi.html" class="card-link">Selengkapnya</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card dest-card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?q=80&w=800&auto=format&fit=crop"
+                            alt="Raja Ampat">
+                        <div class="card-badge"><i class='bx bxs-star'></i> 5.0</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-location"><i class='bx bx-map'></i> Papua Barat</div>
+                        <h3>Kepulauan Raja Ampat</h3>
+                        <p>Surga tersembunyi dengan keanekaragaman hayati bawah laut terbaik di dunia.</p>
+                        <a href="destinasi.html" class="card-link">Selengkapnya</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card dest-card">
+                    <div class="card-img-wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Borobudur-Nothwest-view.jpg"
+                            alt="Borobudur">
+                        <div class="card-badge"><i class='bx bxs-star'></i> 4.8</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-location"><i class='bx bx-map'></i> Jawa Tengah</div>
+                        <h3>Candi Borobudur</h3>
+                        <p>Kagumi kemegahan monumen Buddha terbesar di dunia peninggalan abad ke-9.</p>
+                        <a href="destinasi.html" class="card-link">Selengkapnya</a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card dest-card">
+                    <div class="card-img-wrapper">
+                        <img src="https://media.istockphoto.com/id/1478694706/id/foto/komodo-np.jpg?s=612x612&w=0&k=20&c=Vq2FZXUsH7lRKL2_0u6BBk_GR4ZY9wAEM-_6UWhIQo0="
+                            alt="Komodo">
+                        <div class="card-badge"><i class='bx bxs-star'></i> 4.9</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-location"><i class='bx bx-map'></i> NTT</div>
+                        <h3>Taman Nasional Komodo</h3>
+                        <p>Berjumpa dengan kadal raksasa purba dan pemandangan pulau savana yang spektakuler.</p>
+                        <a href="destinasi.html" class="card-link">Selengkapnya</a>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="card dest-card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?q=80&w=800&auto=format&fit=crop"
+                            alt="Gunung Bromo">
+                        <div class="card-badge"><i class='bx bxs-star'></i> 4.7</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-location"><i class='bx bx-map'></i> Jawa Timur</div>
+                        <h3>Gunung Bromo</h3>
+                        <p>Saksikan langsung keindahan lanskap gunung berapi aktif nan magis saat terbitnya matahari.
+                        </p>
+                        <a href="destinasi.html" class="card-link">Selengkapnya</a>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="card dest-card">
+                    <div class="card-img-wrapper">
+                        <img src="https://media.istockphoto.com/id/2171296504/id/foto/danau-toba-airal-indonesia.jpg?s=612x612&w=0&k=20&c=ujb9F0PCUfxAzKKRlArLfkp4fRu6FoQXiasd-vzVBQQ="
+                            alt="Danau Toba">
+                        <div class="card-badge"><i class='bx bxs-star'></i> 4.8</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-location"><i class='bx bx-map'></i> Sumatera Utara</div>
+                        <h3>Danau Toba</h3>
+                        <p>Danau vulkanik raksasa dengan Pulau Samosir di tengahnya yang sarat akan warisan budaya
+                            Batak.</p>
+                        <a href="destinasi.html" class="card-link">Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="footer-container">
+            <div class="footer-col about-col">
+                <a href="index.html" class="logo">
+                    <img src="logo.svg" alt="Logo" class="logo-img" style="filter: brightness(0) invert(1);">
+                    Pesona<span>Nusantara</span>
+                </a>
+                <p>Jelajahi Tempat Wisata Indonesia adalah platform liburan Anda.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Telusuri</h3>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="destinasi.html">Destinasi</a></li>
+                    <li><a href="promo.html">Promo</a></li>
+                    <li><a href="informasi.html">Informasi</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Jelajahi Tempat Wisata Indonesia. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fcd34d" />
+            <stop offset="100%" stop-color="#f59e0b" />
+        </linearGradient>
+        <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#10b981" />
+            <stop offset="100%" stop-color="#047857" />
+        </linearGradient>
+    </defs>
+    <!-- Minimalist Sun -->
+    <circle cx="50" cy="45" r="28" fill="url(#grad1)" opacity="0.95"/>
+    
+    <!-- Elegant Front Mountain -->
+    <path d="M 15 85 L 50 35 L 85 85 Z" fill="url(#grad2)" />
+    
+    <!-- Darker Mountain Shadow Edge -->
+    <path d="M 50 85 L 50 35 L 85 85 Z" fill="#064e3b" opacity="0.3"/>
+    
+    <!-- Elegant White Wave / Trail cutting through -->
+    <path d="M 0 75 Q 25 65 50 75 T 100 75" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+</svg>
