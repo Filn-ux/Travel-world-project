@@ -28,6 +28,7 @@
     --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 
     /* Transitions */
+    /* Menggunakan transisi CSS untuk efek yang halus */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -112,6 +113,8 @@ img {
     background-color: var(--clr-primary-dark);
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(4, 120, 87, 0.6);
+    /* Menggunakan animasi CSS pada hover */
+    animation: pulse 1s infinite;
 }
 
 .btn-secondary {
@@ -164,6 +167,7 @@ img {
 }
 
 .grid-container {
+    /* Menggunakan CSS Grid Layout */
     display: grid;
     gap: 2rem;
 }
@@ -313,6 +317,8 @@ img {
 .hero-content {
     max-width: 800px;
     color: var(--clr-white);
+    /* Menambahkan animasi saat elemen muncul */
+    animation: fadeInUp 1s ease-out forwards;
 }
 
 .hero-title {
@@ -354,8 +360,41 @@ img {
     border-radius: var(--br-md);
     overflow: hidden;
     box-shadow: var(--shadow-md);
+    /* Menggunakan transisi */
     transition: var(--transition-smooth);
     border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    /* Menggunakan animasi dengan delay yang berbeda */
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Staggered animation delays for grid cards */
+.card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.card:nth-child(6) {
+    animation-delay: 0.6s;
 }
 
 .card:hover {
@@ -402,6 +441,9 @@ img {
 
 .card-content {
     padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .card-location {
@@ -421,10 +463,11 @@ img {
 
 .card-link {
     display: inline-block;
-    margin-top: 1rem;
+    margin-top: auto;
     font-weight: 600;
     color: var(--clr-primary);
     border-bottom: 2px solid transparent;
+    align-self: flex-start;
 }
 
 .card-link:hover {
@@ -635,17 +678,174 @@ img {
 }
 
 /* ===========================
-   Animations
+   Gallery Section (CSS Grid)
    =========================== */
+.gallery-section {
+    background-color: var(--clr-light);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: var(--br-md);
+    overflow: hidden;
+    cursor: pointer;
+    /* Animasi elemen masuk */
+    opacity: 0;
+    animation: zoomIn 0.8s ease-out forwards;
+}
+
+.gallery-item:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.gallery-item:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.gallery-item:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.gallery-item:nth-child(4) {
+    animation-delay: 0.5s;
+}
+
+.gallery-item:nth-child(5) {
+    animation-delay: 0.6s;
+}
+
+.item-1 {
+    grid-column: span 3;
+    grid-row: 1;
+    aspect-ratio: 4 / 3;
+}
+
+.item-4 {
+    grid-column: span 3;
+    grid-row: 1;
+    aspect-ratio: 4 / 3;
+}
+
+.item-2 {
+    grid-column: span 2;
+    grid-row: 2;
+    aspect-ratio: 1 / 1;
+}
+
+.item-3 {
+    grid-column: span 2;
+    grid-row: 2;
+    aspect-ratio: 1 / 1;
+}
+
+.item-5 {
+    grid-column: span 2;
+    grid-row: 2;
+    aspect-ratio: 1 / 1;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Transisi untuk efek hover */
+    transition: transform 0.5s ease;
+}
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(4, 120, 87, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    /* Transisi untuk efek overlay */
+    transition: opacity 0.4s ease;
+}
+
+.gallery-overlay span {
+    color: var(--clr-white);
+    font-size: 1.5rem;
+    font-weight: 700;
+    transform: translateY(20px);
+    /* Transisi untuk teks */
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-item:hover .gallery-overlay span {
+    transform: translateY(0);
+}
+
+/* ===========================
+   Animations (Keyframes)
+   =========================== */
+/* Menggunakan CSS Animations (@keyframes) */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1) translateY(-3px);
+    }
+
+    50% {
+        transform: scale(1.03) translateY(-3px);
+    }
+
+    100% {
+        transform: scale(1) translateY(-3px);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 /* Removed Intersection Observer reveal-up logically, ensuring elements are visible */
 .reveal-up {
     opacity: 1;
     transform: none;
+    animation: fadeInUp 0.8s ease-out forwards;
 }
 
 /* ===========================
    Media Queries (Responsive)
    =========================== */
+/* Menggunakan Media Queries untuk mendesain secara responsif */
 @media (max-width: 992px) {
     .experiences-wrapper {
         grid-template-columns: 1fr;
@@ -688,6 +888,28 @@ img {
 
     .cta-form {
         flex-direction: column;
+    }
+
+    /* Penyesuaian Grid Gallery untuk Mobile */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .item-1,
+    .item-4 {
+        grid-area: auto;
+        grid-column: span 1;
+        grid-row: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    .item-2,
+    .item-3,
+    .item-5 {
+        grid-area: auto;
+        grid-column: span 1;
+        grid-row: auto;
+        aspect-ratio: 1 / 1;
     }
 
     .btn {
