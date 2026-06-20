@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar - Jelajahi Tempat Wisata Indonesia</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .auth-wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            min-height: calc(100vh - 80px);
+            margin-top: 80px;
+        }
+        @media (min-width: 900px) {
+            .auth-wrapper {
+                grid-template-columns: 1.2fr 1fr;
+            }
+        }
+        .auth-banner {
+            /* Gambar resort/alam yang indah dan cerah */
+            background: url('https://images.unsplash.com/photo-1570213489059-0aac6626cade?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat;
+            position: relative;
+            display: none;
+        }
+        @media (min-width: 900px) {
+            .auth-banner {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                padding: 4rem;
+                color: white;
+            }
+        }
+        .auth-banner::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0) 100%);
+        }
+        .auth-banner-content {
+            position: relative;
+            z-index: 1;
+        }
+        .auth-banner-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            color: #ffffff; /* Explicitly set to white to override style.css */
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        .auth-banner-title span {
+            color: #ffd700; /* Warna emas/kuning cerah yang sangat enak dilihat */
+        }
+        .auth-banner-subtitle {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            opacity: 0.95;
+            max-width: 80%;
+            color: #f8fafc; /* Explicitly set to light color to override style.css */
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .auth-section {
+            padding: 3rem 2rem;
+            background-color: var(--clr-light);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .auth-card {
+            background: var(--clr-surface);
+            width: 100%;
+            max-width: 450px;
+            padding: 3.5rem 3rem;
+            border-radius: 24px; /* Lebih membulat agar terkesan ramah */
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0,0,0,0.02);
+        }
+        .auth-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--clr-primary);
+            margin-bottom: 0.5rem;
+        }
+        .auth-subtitle {
+            color: #64748b; /* Abu-abu medium yang lebih terang */
+            margin-bottom: 2.5rem;
+            font-size: 1rem;
+        }
+        .input-group {
+            position: relative;
+            margin-bottom: 1.25rem;
+        }
+        .input-group i {
+            position: absolute;
+            left: 1.2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #a0aec0;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+        .auth-input {
+            width: 100%;
+            padding: 1rem 1rem 1rem 3.2rem;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 14px;
+            font-family: inherit;
+            font-size: 1rem;
+            color: var(--clr-text);
+            background-color: rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        .auth-input::placeholder {
+            color: #a0aec0;
+        }
+        .auth-input:focus {
+            outline: none;
+            border-color: var(--clr-primary);
+            background-color: rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+        }
+        .auth-input:focus ~ i {
+            color: var(--clr-primary);
+        }
+        .auth-btn {
+            width: 100%;
+            padding: 1rem;
+            /* Gradien lembut untuk tombol utama */
+            background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+            color: white;
+            border: none;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 12px rgba(4, 120, 87, 0.2);
+        }
+        .auth-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(4, 120, 87, 0.3);
+            filter: brightness(1.05);
+        }
+        .auth-link-text {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.95rem;
+            color: var(--clr-text-light);
+        }
+        .auth-link-text a {
+            color: var(--clr-primary);
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .auth-link-text a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.svg" alt="Logo Pesona Nusantara" class="logo-img"> Pesona<span>Nusantara</span>
+            </a>
+
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Beranda</a></li>
+                    <li><a href="destinasi.html" class="nav-link">Destinasi</a></li>
+                    <li><a href="promo.html" class="nav-link">Promo</a></li>
+                    <li><a href="informasi.html" class="nav-link">Informasi</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    <li><a href="login.html" class="nav-link">Login</a></li>
+                </ul>
+            </nav>
+
+            <label for="nav-toggle" class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+        </div>
+    </header>
+
+    <main class="auth-wrapper">
+        <div class="auth-banner">
+            <div class="auth-banner-content">
+                <h2 class="auth-banner-title">Mulai <br><span>Cerita Anda</span> Bersama Kami</h2>
+                <p class="auth-banner-subtitle">Bergabung dengan ribuan penjelajah lainnya. Temukan, bagikan, dan abadikan setiap momen indah liburan di seluruh pelosok negeri.</p>
+            </div>
+        </div>
+        
+        <section class="auth-section">
+            <div class="auth-card">
+                <h3 class="auth-title">Bergabung Bersama Kami</h3>
+                <p class="auth-subtitle">Isi data diri Anda untuk memulai</p>
+                <form id="registerForm">
+                    <div class="input-group">
+                        <input type="text" id="registerName" class="auth-input" placeholder="Nama Lengkap" required>
+                        <i class='bx bx-user'></i>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="registerEmail" class="auth-input" placeholder="Alamat Email (@gmail.com)" required>
+                        <i class='bx bx-envelope'></i>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="registerPassword" class="auth-input" placeholder="Kata Sandi Baru" required>
+                        <i class='bx bx-lock-alt'></i>
+                    </div>
+                    <button type="submit" class="auth-btn">
+                        <span>Daftar Sekarang</span>
+                        <i class='bx bx-right-arrow-alt' style="font-size: 1.2rem;"></i>
+                    </button>
+                    <p class="auth-link-text">
+                        Sudah punya akun? <a href="login.html">Login di sini</a>
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="footer-container">
+            <div class="footer-col about-col">
+                <a href="index.html" class="logo">
+                    <img src="logo.svg" alt="Logo" class="logo-img" style="filter: brightness(0) invert(1);">
+                    Pesona<span>Nusantara</span>
+                </a>
+            </div>
+            <div class="footer-col">
+                <h3>Telusuri</h3>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Jelajahi Tempat Wisata Indonesia. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -3,16 +3,17 @@
    =========================== */
 :root {
     /* Colors */
-    --clr-primary: #047857;
-    /* Emerald Green - Nature/Jungle */
-    --clr-primary-light: #10b981;
-    --clr-primary-dark: #064e3b;
-    --clr-accent: #f59e0b;
+    --clr-primary: #10b981;
+    /* Bright Emerald - Nature/Jungle */
+    --clr-primary-light: #34d399;
+    --clr-primary-dark: #059669;
+    --clr-accent: #fbbf24;
     /* Warm golden accent - Sun/Sand */
 
-    --clr-text: #1f2937;
-    --clr-text-light: #4b5563;
-    --clr-light: #f3f4f6;
+    --clr-text: #f8fafc;
+    --clr-text-light: #94a3b8;
+    --clr-light: #0f172a; /* Slate 900 - Main Background */
+    --clr-surface: #1e293b; /* Slate 800 - Cards/Sections */
     --clr-white: #ffffff;
     --clr-black: #000000;
 
@@ -106,13 +107,13 @@ img {
 .btn-primary {
     background-color: var(--clr-primary);
     color: var(--clr-white);
-    box-shadow: 0 4px 14px rgba(4, 120, 87, 0.4);
+    box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
 }
 
 .btn-primary:hover {
-    background-color: var(--clr-primary-dark);
+    background-color: var(--clr-primary-light);
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(4, 120, 87, 0.6);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
     /* Menggunakan animasi CSS pada hover */
     animation: pulse 1s infinite;
 }
@@ -182,7 +183,7 @@ img {
     width: 100%;
     z-index: 1000;
     padding: 1rem 5%;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(15, 23, 42, 0.95);
     backdrop-filter: blur(10px);
     box-shadow: var(--shadow-sm);
 }
@@ -199,7 +200,7 @@ img {
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--clr-primary);
+    color: var(--clr-white);
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -216,7 +217,7 @@ img {
 }
 
 .nav-link {
-    color: var(--clr-text);
+    color: var(--clr-white);
     font-weight: 500;
     position: relative;
     font-size: 1rem;
@@ -256,7 +257,7 @@ img {
     height: 3px;
     margin: 5px auto;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    background-color: var(--clr-text);
+    background-color: var(--clr-white);
 }
 
 /* CSS tricks to animate the hamburger on check */
@@ -330,7 +331,7 @@ img {
 }
 
 .hero-subtitle {
-    color: var(--clr-light);
+    color: var(--clr-white);
     font-size: clamp(1rem, 2vw, 1.25rem);
     margin-bottom: 2.5rem;
     padding: 0 1rem;
@@ -346,7 +347,7 @@ img {
    Destinations Section
    =========================== */
 .destinations {
-    background-color: var(--clr-white);
+    background-color: var(--clr-surface);
 }
 
 .cards-container {
@@ -356,13 +357,13 @@ img {
 }
 
 .card {
-    background-color: var(--clr-white);
+    background-color: var(--clr-surface);
     border-radius: var(--br-md);
     overflow: hidden;
     box-shadow: var(--shadow-md);
     /* Menggunakan transisi */
     transition: var(--transition-smooth);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -423,7 +424,7 @@ img {
     position: absolute;
     top: 15px;
     right: 15px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(15, 23, 42, 0.85);
     backdrop-filter: blur(4px);
     padding: 0.3rem 0.8rem;
     border-radius: 20px;
@@ -515,7 +516,7 @@ img {
 }
 
 .exp-item {
-    background: var(--clr-white);
+    background: var(--clr-surface);
     padding: 2rem 1.5rem;
     border-radius: var(--br-md);
     box-shadow: var(--shadow-md);
@@ -560,7 +561,7 @@ img {
    CTA Section
    =========================== */
 .cta-section {
-    background: linear-gradient(rgba(4, 120, 87, 0.9), rgba(6, 78, 59, 0.9)), url('https://images.unsplash.com/photo-1544644181-1484b3fdfc62?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat fixed;
+    background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.9)), url('https://images.unsplash.com/photo-1544644181-1484b3fdfc62?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat fixed;
     text-align: center;
     color: var(--clr-white);
 }
@@ -602,8 +603,8 @@ img {
    Footer
    =========================== */
 .footer {
-    background-color: #111827;
-    color: var(--clr-light);
+    background-color: #0b0f19; /* Darker than body */
+    color: var(--clr-text-light);
     padding: 5rem 5% 2rem;
 }
 
@@ -774,7 +775,7 @@ img {
 .gallery-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(4, 120, 87, 0.7);
+    background: rgba(16, 185, 129, 0.8);
     display: flex;
     align-items: center;
     justify-content: center;
