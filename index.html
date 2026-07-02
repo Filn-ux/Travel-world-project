@@ -7,6 +7,8 @@
     <title>Beranda - Jelajahi Tempat Wisata Indonesia</title>
     <!-- Favicon -->
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
@@ -191,6 +193,38 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Discount Modal -->
+            <div class="modal fade" id="discountModal" tabindex="-1" aria-labelledby="discountModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content"
+                        style="background-color: var(--clr-surface); border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <div class="modal-header" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                            <h5 class="modal-title text-warning fw-bold" id="discountModalLabel"><i
+                                    class='bx bxs-offer'></i> Promo Spesial!</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=800&auto=format&fit=crop"
+                                alt="Promo Bali" class="img-fluid rounded mb-3 shadow"
+                                style="max-height: 200px; object-fit: cover; width: 100%;">
+                            <h4 class="mb-2 text-white">Diskon 30% ke Bali!</h4>
+                            <p class="text-light mb-0">Gunakan kode voucher <strong
+                                    class="text-warning">PESONA30</strong> saat checkout.<br>Berlaku hingga akhir bulan
+                                ini.</p>
+                        </div>
+                        <div class="modal-footer justify-content-center"
+                            style="border-top: 1px solid rgba(255,255,255,0.1);">
+                            <button type="button" class="btn btn-outline-light rounded-pill px-4"
+                                data-bs-dismiss="modal">Nanti Saja</button>
+                            <a href="promo.html" class="btn btn-warning rounded-pill px-4 fw-bold">Klaim Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
     </main>
 
     <!-- Footer -->
@@ -219,6 +253,10 @@
             <p>&copy; 2026 Jelajahi Tempat Wisata Indonesia. All rights reserved.</p>
         </div>
     </footer>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 

@@ -114,4 +114,26 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-});
+
+}
+);
+
+// --- POPUP DISKON (jQuery) ---
+if (typeof jQuery !== 'undefined') {
+    $(document).ready(function () {
+        if ($('#discountModal').length > 0) {
+            setTimeout(function () {
+                try {
+                    $('#discountModal').modal('show');
+                } catch (e) {
+                    // Fallback to vanilla JS if Bootstrap jQuery plugin fails
+                    const modalElement = document.getElementById('discountModal');
+                    if (modalElement && typeof bootstrap !== 'undefined') {
+                        const bsModal = new bootstrap.Modal(modalElement);
+                        bsModal.show();
+                    }
+                }
+            }, 1500);
+        }
+    });
+}
